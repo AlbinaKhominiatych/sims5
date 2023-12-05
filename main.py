@@ -29,3 +29,10 @@ class Human:
         pass
     def clean_home(self):
         pass
+#вивід показників життєвого стану перса
+    def days_indexes(self, day):
+        pass
+    def is_alive(self):
+        pass
+    def live(self, day):
+        pass
