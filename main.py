@@ -16,8 +16,10 @@ class Human:
 
     def get_home(self):
         pass
+
     def get_car(self):
-        pass
+        self.car = Auto(brands_of_car)
+
     def get_job(self):
         pass
     def eat(self):
@@ -44,12 +46,7 @@ class Auto:
         self.fuel = band_list[self.brand]["fuel"]
         self.strength = band_list[self.brand]["strength"]
         self.consumption = band_list[self.brand]["consumption"]
-        brands_of_car = {
-            "BMW": {"fuel": 120, "strength":720, "consumption": 17},
-            "McLaren": {"fuel": 80, "strength": 800, "consumption": 4},
-            "Lamborghini": {"fuel": 90, "strength": 780, "consumption": 17},
-            "Porsche": {"fuel": 110, "strenght": 330, "consumption": 11}
-        }
+
     def drive(self):
         if self.strength > 0 and self.fuel >= self.consumption:
             self.fuel -= self.consumption
@@ -58,3 +55,13 @@ class Auto:
         else:
             print("Машина не можуе рухатися")
             return False
+
+
+brands_of_car = {
+            "BMW": {"fuel": 120, "strength":720, "consumption": 17},
+            "McLaren": {"fuel": 80, "strength": 800, "consumption": 4},
+            "Lamborghini": {"fuel": 90, "strength": 780, "consumption": 17},
+            "Porsche": {"fuel": 110, "strenght": 330, "consumption": 11}
+        }
+nick = Human(name = "Vasya")
+nick.get_car()
